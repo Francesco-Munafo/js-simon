@@ -37,7 +37,7 @@ function timerFunction(timerLimit) {
      console.log(hoursToGo, "ore");
     
 
-    if (secondsToGo === 0) {
+    if (secondsToGo < 0) {
         clearInterval(timer)
         
     }
