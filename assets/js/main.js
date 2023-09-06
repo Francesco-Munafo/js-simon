@@ -22,7 +22,7 @@ const timer = setInterval(timerFunction, 1000);
 
 
 function timerFunction(timerLimit) {
-    timerLimit = Date.parse("2023-09-06 09:30"); //.parse returns date in ms
+    timerLimit = Date.parse("2023-09-06 09:50"); //.parse returns date in ms
     let currentTime = Date.now();
     // console.log(timerLimit, "ms dell'ora massima");
     // console.log(currentTime, "ora attuale in ms");
@@ -43,6 +43,9 @@ function timerFunction(timerLimit) {
     }
     let timerDomEl = document.getElementById('timer')
     timerDomEl.innerHTML = hoursToGo.toFixed() + " : " + minutesToGo.toFixed() + " : " + secondsToGo.toFixed()
+    if (hoursToGo < 0){
+        timerDomEl.innerHTML= "KA" + " : " + "BO" + " : " + "OM"
+    }
      
 }
 
